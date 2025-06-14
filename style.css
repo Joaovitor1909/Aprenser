@@ -1,0 +1,308 @@
+@font-face {
+  font-family: 'Poppins';
+  src: url(fonts/Poppins-Light.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+a{
+  text-decoration: none;
+}
+
+.upper{
+  text-transform: uppercase;
+}
+
+.header__color {
+  background-color: rgb(31, 30, 30);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: fixed;  /* Fixa no topo da tela */
+  top: 0;           /* Encostada no topo */
+  left: 0;          /* Encostada na esquerda */
+  z-index: 1000;    /* Fica acima de outros elementos */
+}
+
+.header{
+  display: flex;
+  justify-content: space-between; /* SEPARA logo à esquerda e menu à direita */
+  align-items: center;             /* Alinha verticalmente no centro */
+  width: 100%;
+  max-width: 1440px;               /* Limite de largura para telas grandes */
+  padding: 2rem;                   /* Espaçamento interno opcional */
+}
+
+.header__logo{
+  width: 12em;
+  height: auto;
+}
+
+.header__menu-bottom{
+  display: flex;
+  list-style-type: none;
+  text-transform: uppercase;
+  gap: 2em;
+  justify-content: center;
+}
+
+.header__menu-bottom a{
+  font-family: sans-serif;
+  font-size: 1.6em;
+  color: #ffe607;
+  border: solid#ffe607;
+  border-width: 1px;
+  padding: .5em;
+}
+
+.header__menu-bottom :hover{
+  background-color: #3f3a3a;
+  color: #ffe607;
+}
+
+.section__color{
+  background: linear-gradient(to bottom, #ffffff, rgb(255, 255, 75) );
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 120px; /* altura aproximada da header */
+}
+
+.section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  gap: 4rem;
+
+}
+
+.section__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: left;
+}
+
+.section__content h1{
+  font-family: 'Poppins';
+  font-size: 8em;
+}
+
+.section__buttom {
+  font-family: 'Poppins';
+  font-size: 2em;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  background-color: #ffe607;
+  color: black;
+  text-decoration: none;
+  width: 8em;
+  border-radius: 0.5rem;
+}
+
+.section__img{
+  flex: 1;
+  max-width: 100%;
+  height: auto;
+}
+
+.main_color{
+  background-color: #ffffff;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.main__titulo{
+  font-family: 'Poppins';
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  font-size: 3em; /* opcional */
+  margin: 4rem 0 4rem 0; /* espaçamento acima e abaixo */
+}
+
+.main__cursos {
+  width: 500px;
+  display: flex; /* transforma o container em um flex container */
+  flex-direction: column; /* faz com que os filhos (imagem, título, descrição) fiquem empilhados em coluna (de cima para baixo) */
+  gap: 1.5rem; 
+  border: solid #ebf0f1;
+  border-radius: 1.5em;
+  border-width: 0.1em;
+  overflow: hidden;
+}
+
+.main__cursos-imagem {
+  width: 100%;
+  height: auto; 
+}
+
+.main__cursos-titulo{
+  padding-left: 2em;
+  font-family: 'Poppins';
+  font-size: 2em;
+}
+
+.main__cursos-descricao{
+  padding-left: 2em;
+  font-family: 'Poppins';
+  font-size: 1.9em;
+}
+
+.main__bottom{
+  font-family: 'Poppins';
+  font-weight: bold;
+  display: block;
+  width: 100%;        /* Ocupa toda a linha */
+  max-width: 13em;   /* Se quiser limitar a largura igual às caixas dos cursos */
+  margin: 2rem auto 0 auto; /* centraliza e empurra pra baixo */
+  padding: 1rem 2rem;
+  background-color: #ffe607;
+  color: black;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-size: 2rem;
+  text-decoration: none;
+  margin: 7em auto 0 auto;
+}
+
+.encerramento_color{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #0b1b45;
+  margin-top: 13em;
+}
+
+.encerramento {
+  display: flex; /* Ativa o flexbox para alinhar os itens lado a lado */
+  justify-content: space-between; /* Espaça os elementos igualmente, um em cada extremidade */
+  max-width: 1440px; /* Limita a largura máxima do container */
+  padding: 2rem; /* Adiciona espaçamento interno em todos os lados */
+  align-items: flex-end; /* Alinha os itens pela base do container (parte inferior) */
+}
+
+.encerramento__texto {
+  display: flex;
+  flex-direction: column; /* empilha os elementos um embaixo do outro */
+  justify-content: flex-start;
+  gap: 2rem; /* espaço entre o h2 e o p (opcional) */
+  max-width: 600px; /* opcional para limitar largura do texto */
+  padding-left: 5%;
+}
+
+.encerramento__imagem{
+  align-self: flex-end; /* garante que ela vá pra base */
+  max-width: 500px;
+  height: auto;
+  margin: 0; /* remove espaços indesejados */
+  display: block; /* evita espaçamentos fantasmas de inline */
+  margin-bottom: -2rem;
+}
+
+section h2{
+  color: white;
+  font-family: 'Poppins';
+  font-size: 4em;
+  padding: 1em 0 1em 0;
+}
+
+section p{
+  color: white;
+  font-family: 'Poppins';
+  font-size: 1.5em;
+  letter-spacing: 1.5px;
+  line-height: 1.5em;
+  padding-bottom: 4em;
+}
+
+.article__color{
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  background-color: #eff9fc;
+}
+
+.contato__titulo{
+  font-family: 'Poppins';
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  font-size: 3em; /* opcional */
+  margin: 0rem 0 4rem 0; /* espaçamento acima e abaixo */
+  padding-top: 4rem;
+}
+
+.contato__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contato__imagem {
+  width: 100%;         /* ocupar toda a largura disponível */
+  max-width: 1200px;   /* limite máximo maior */
+  height: auto;        /* mantém a proporção */
+  display: block;
+  margin: 0 auto;
+}
+
+.contato__infos {
+  list-style: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  color: #333;
+  text-align: right;      /* texto alinhado à direita */
+  margin-top: 0.5rem;     /* espaço entre imagem e lista */
+  padding-right: 1rem;    /* afastar um pouco da borda direita */
+  padding: 1em 0 2em 0 ;
+}
+
+.footer__color{
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  background-color: black;
+}
+
+footer{
+  align-items: center;
+  padding: 2em 0 2em 0;
+}
+
+footer p{
+  text-align: center;
+  color: white;
+  font-family: 'Poppins';
+  font-size: 1.5em;
+}
+
+#cursos,
+#NossaEscola,
+#Contatos {
+  padding-top: 120px;  /* Altura da header fixa */
+  scroll-margin-top: 95px;
+}
